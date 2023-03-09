@@ -12,7 +12,7 @@ export default function SignIn() {
     password: '',
   })
   const { email, password } = formData
-  const navigate = useNavigate
+  const navigate = useNavigate()
 
   function onChange(e) {
     setFormData((prevState) => ({
@@ -24,7 +24,7 @@ export default function SignIn() {
   async function onSubmit(e) {
     e.preventDefault()
     try {
-      const auth = getAuth
+      const auth = getAuth()
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
@@ -50,7 +50,7 @@ export default function SignIn() {
           />
         </div>
         <div className='w-full md:w-[67%] lg:w-[40%] lg:ml-20'>
-          <form nSubmit={onSubmit} className=''>
+          <form onSubmit={onSubmit}>
             <input
               className='mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out'
               type='email'
