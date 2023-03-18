@@ -388,12 +388,12 @@ export default function CreateListing() {
                 value={regularPrice}
                 onChange={onChange}
                 min='50'
-                max='400000000'
+                max='4000000000'
                 required
               />
               {type === 'rent' && (
                 <div className=''>
-                  <p class='text-md w-full whitespace-nowrap'>$ / Month</p>
+                  <p class='text-md w-full whitespace-nowrap'>N / Month</p>
                 </div>
               )}
             </div>
@@ -411,12 +411,12 @@ export default function CreateListing() {
                   value={discountedPrice}
                   onChange={onChange}
                   min='50'
-                  max='400000000'
+                  max='4000000000'
                   required={offer}
                 />
                 {type === 'rent' && (
                   <div className=''>
-                    <p class='text-md w-full whitespace-nowrap'>$ / Month</p>
+                    <p class='text-md w-full whitespace-nowrap'>N / Month</p>
                   </div>
                 )}
               </div>
